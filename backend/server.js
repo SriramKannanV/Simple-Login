@@ -17,7 +17,7 @@ app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
 
-app.post("/api/signup", async (req, res) => {
+app.post("/signup", async (req, res) => {
   const { user_name, email } = req.body;
   const userExist = await User.findOne({ email: email });
 
@@ -38,7 +38,7 @@ app.post("/api/signup", async (req, res) => {
   }
 });
 
-app.post("/api/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   const { user_name, email } = req.body;
   const userExists = await User.findOne({ email: email });
 
