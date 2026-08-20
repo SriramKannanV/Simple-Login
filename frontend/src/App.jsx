@@ -8,8 +8,8 @@ import ProtectedRoute from "./component/ProtectedRoute";
 const route = createBrowserRouter([
   {
     path: "/",
-    element: <Signup />
-  }
+    element: <Signup />,
+  },
   {
     path: "/api/signup",
     element: <Signup />,
