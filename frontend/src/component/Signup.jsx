@@ -11,7 +11,7 @@ const Signup = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8080/api/signup", {
+    const res = await fetch(`${URL}/signup`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

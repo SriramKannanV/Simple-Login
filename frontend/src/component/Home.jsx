@@ -6,6 +6,7 @@ const Home = () => {
   const [users, setUsers] = useState([]);
   const [updateId, setUpdateId] = useState(null);
   const [username, setUsername] = useState("");
+  const URL = "https://simple-login-auth-app.netlify.app";
 
   const [user_name, setUser_name] = useState(() => {
     return localStorage.getItem("cur_user") || null;
@@ -19,7 +20,7 @@ const Home = () => {
   };
 
   async function fetchData() {
-    const res = await fetch("http://localhost:8080/home");
+    const res = await fetch(`${URL}/home`);
     const data = await res.json();
     setUsers(data);
   }
@@ -36,7 +37,7 @@ const Home = () => {
   const handleSubmit = async (user) => {
     const id = user._id;
 
-    const res = await fetch("http://localhost:8080/home", {
+    const res = await fetch(`${URL}/home`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +56,7 @@ const Home = () => {
     if (isConfirm) {
       const id = user._id;
 
-      const res = await fetch("http://localhost:8080/home", {
+      const res = await fetch(`${URL}/home`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
