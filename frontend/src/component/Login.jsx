@@ -66,7 +66,7 @@ const Login = () => {
         <p className="text-center text-sm">
           Already have account?{" "}
           <span className="text-blue-500 cursor-pointer">
-            <Link to="/api/signup">Sign Up</Link>
+            <Link to="/signup">Sign Up</Link>
           </span>
         </p>
       </form>

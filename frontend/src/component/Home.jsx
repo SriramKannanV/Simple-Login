@@ -76,7 +76,7 @@ const Home = () => {
           className="bg-slate-950 text-white py-2.5 px-6 rounded cursor-pointer shadow-md font-semibold"
           onClick={handleLogout}
         >
-          <Link to="/api/login">Log Out</Link>
+          <Link to="/login">Log Out</Link>
         </button>
       </div>
 
